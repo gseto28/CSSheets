@@ -1,0 +1,3 @@
+[submodule "src/CSApi"]
+	path = src/CSApi
+	url = git@github.com:gseto28/CSApi.git
