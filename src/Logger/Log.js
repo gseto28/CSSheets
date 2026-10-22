@@ -7,6 +7,16 @@ const LOG_ERROR = 50;
 const LOG_FATAL = 60;
 const LOG_OFF = 99;
 
+const logLevels = {
+  LOG_TRACE: 10,
+  LOG_DEBUG: 20,
+  LOG_INFO: 30,
+  LOG_WARN: 40,
+  LOG_ERROR: 50,
+  LOG_FATAL: 60,
+  LOG_OFF: 99
+};
+
 function getLogLevelName_(level) {
   switch (level) {
     case LOG_TRACE: return "TRACE";
@@ -23,7 +33,8 @@ function getLogLevelName_(level) {
 function writeLog(action, level, status, details) {
 
   const setLevel = PropertiesService.getDocumentProperties().getProperty("Log Level");
-  if (setLevel > level) {
+
+  if (logLevels[setLevel] > level) {
     return;
   }
 
