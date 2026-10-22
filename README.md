@@ -5,8 +5,13 @@
 ## Pre-Reqs:
     -  User must have a call steward account and a google account
 
-
-
+## Features:
+ - Logging
+    - Logs written in a log sheet for debugging
+    - Ability to set logging level from Command Center sheet
+ - Initalizer
+    - Checks for required sheets
+    - Initilizer to create required sheets
 
 
 
